@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <div className="text-center my-20">
       <h1 className="text-4xl sm:text-6xl font-bold text-gray-800 mb-6">
@@ -13,7 +16,10 @@ function Header() {
         in seconds. Just type your idea and watch the magic happen.
       </p>
 
-      <button className="bg-black text-white px-8 py-3 rounded-full">
+      <button
+        onClick={() => navigate("/result")}
+        className="bg-black text-white px-8 py-3 rounded-full"
+      >
         Generate Images
       </button>
 
