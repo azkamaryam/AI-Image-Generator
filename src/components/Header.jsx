@@ -27,7 +27,7 @@ function Header() {
         <img
           src={assets.hero}
           alt="Hero"
-          className="w-full max-w-4xl mx-auto rounded-xl"
+          className="w-52 sm:w-64 md:w-72 mx-auto"
         />
       </div>
     </div>
