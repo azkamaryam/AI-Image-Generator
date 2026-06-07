@@ -18,7 +18,12 @@ function Result() {
               Generate Again
             </button>
 
-            <button className="border px-6 py-2 rounded-full">
+            <button
+              onClick={() =>
+                alert("Download feature coming soon.")
+              }
+              className="border px-6 py-2 rounded-full"
+            >
               Download
             </button>
           </div>

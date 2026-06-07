@@ -1,6 +1,10 @@
 import { plans } from "../assets/assets";
 
 function BuyCredit() {
+  const handlePurchase = (plan) => {
+    alert(`${plan} plan selected. Payment integration coming soon.`);
+  };
+
   return (
     <div className="min-h-screen px-4 sm:px-10 md:px-14 lg:px-28 py-12">
       <h1 className="text-4xl font-bold text-center mb-4">
@@ -33,7 +37,10 @@ function BuyCredit() {
               {plan.desc}
             </p>
 
-            <button className="bg-black text-white px-6 py-2 rounded-full">
+            <button
+              onClick={() => handlePurchase(plan.id)}
+              className="bg-black text-white px-6 py-2 rounded-full"
+            >
               Purchase
             </button>
           </div>

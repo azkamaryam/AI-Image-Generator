@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import Login from "./Login";
 
 function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -11,15 +13,24 @@ function Navbar() {
         <img
           src={assets.logo}
           alt="Logo"
-          className="w-32 sm:w-44 cursor-pointer"
+          className="w-32 sm:w-44"
         />
 
-        <button
-          onClick={() => setShowLogin(true)}
-          className="bg-black text-white px-8 py-2 rounded-full text-sm"
-        >
-          Login
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={() => navigate("/buy")}
+            className="border px-6 py-2 rounded-full text-sm"
+          >
+            Buy Credits
+          </button>
+
+          <button
+            onClick={() => setShowLogin(true)}
+            className="bg-black text-white px-8 py-2 rounded-full text-sm"
+          >
+            Login
+          </button>
+        </div>
       </div>
 
       <Login
